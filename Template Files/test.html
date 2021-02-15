@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" href="{%static 'css/teststyle.css' %}">
+  </head>
+<body>
+  <center>
+  <div class="heading">
+  <h1>WELCOME</h2>
+  </div>
+</center>
+
+{%if count %}
+<h2 style="color:red">Q:No {{count}}</h2>
+{%if Rem %}
+<h2 style="margin-left:640px;color:red">Remaining Q: {{Rem}}</h2>
+{% endif %}
+{% endif %}
+  <form action=""  method="post">
+    {%csrf_token%}
+    <div class="questionblock">
+      <div class="que">
+      <h3>{{que}}</h3>
+    {% if level %}
+<h5>Level:{{level}}</h5>
+    {% else %}
+    level not defined
+    {% endif %}
+  </div>
+  <div class="options">
+    <input type="radio" value={{a}} name="answer"><span>{{a}}</span>
+  </div>
+  <div class="options">
+    <input type="radio" value={{b}} name="answer"><span>{{b}}</span>
+  </div>
+  <div class="options">
+    <input type="radio" value={{c}} name="answer"><span>{{c}}</span>
+  </div>
+  <div class="options">
+    <input type="radio" value={{d}} name="answer"><span>{{d}}</span>
+  </div>
+  <div class="submit">
+  <input type="submit" value="submit">
+</div>
+</div>
+</form>
+{%if ans %}
+<h2>Your answer is:{{ans}}</h2>
+{% endif %}
+
+{%if t %}
+<h2>Your answer is:{{t}}</h2>
+{% endif %}
+
+
+
+
+
+
+
+</body>
+  </html>

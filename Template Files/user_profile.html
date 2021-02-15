@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:lightgray">
+    <table>
+      <tr>
+    <td><a href="/exam/profile/"style="margin-left:1170px;font-size:25px;color:yellow">Profile</a></td>
+    <td><a href="/exam/logout/"style="margin-left:20px;font-size:25px;color:yellow">Logout</a></td>
+  </tr>
+  </table>
+  <center>
+    <h2 style="color:green;margin-top:-26px">You have completed your test successfully  <span style="font-size:15px">&#9989<span></h2>
+    <h2 style="color:red">Hello {{name}}</h2>
+  </center>
+    <div id="table" style="padding-left:50px;width:270px;height:600px;margin-left:300px;border:1px solid blue">
+   <table>
+     <h2 style="color:blue">Your Answer:</h2>
+    {% for lst in list %}
+    <tr>
+     <div id="td" style="width:200px;height:30px;background-color:white">
+       <center><h2 style="color:red">{{lst}}</h2></center>
+      </div>
+    </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div id="table" style="padding-left:50px;width:270px;height:600px;margin-left:620px;margin-top:-602px;border:1px solid blue">
+ <table>
+   <h2 style="color:blue">Expected Ans:</h2>
+  {% for lst1 in answerlist %}
+  <tr>
+   <div id="td" style="width:200px;height:30px;background-color:white">
+     <center><h2 style="color:red">{{lst1}}</h2></center>
+    </div>
+  </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div id="table" style="padding-left:50px;width:210px;height:600px;margin-left:900px;margin-top:-602px;border:1px solid blue">
+<table>
+ <h2 style="color:blue">Status:</h2>
+{% for lst2 in list1 %}
+<tr>
+ <div id="td" style="width:200px;height:30px;background-color:white">
+   {% if lst2 == "true" %}
+   <center><h2 style="color:red">&#9989</h2></center>
+   {% else %}
+   <center><h2 style="color:red">&#10060</h2></center>
+   {% endif %}
+  </div>
+</tr>
+  {% endfor %}
+</table>
+</div>
+<h2>Your Score is :{{number}}</h2>
+<h2>Your Dictionary is :{{dict}}</h2>
+  </body>
+</html>

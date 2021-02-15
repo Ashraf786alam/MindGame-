@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:lightgray">
+    <a href="/exam/logout/" style="margin-left:1270px;font-size:20px">Logout</a>
+  <center>  <h2 style="color:green">change your password</h2> </center>
+    <form action="" method="post">
+    {%csrf_token%}
+    <center>
+<div style="width:500px;height:200px;border:1px solid cyan;padding-top:30px;border-radius:10px">
+  <table>
+    <tr>
+  <td><label for="Username:" style="color:blue;font-size:17px">Username:</label></td>
+   <td><input type="text" name="change" style="width:200px; height:15px;padding-left:5px;padding-top:3px;border:1px solid blue"></td>
+ </tr>
+ <tr></tr>
+ <tr></tr>
+ <tr></tr>
+ <tr></tr>
+ <tr></tr>
+ <tr>
+<td><label for="New Password :" style="color:blue;font-size:17px">New Password:</label></td>
+<td><input type="password" name="change1" style="width:200px; height:15px;padding-left:5px;padding-top:3px;border:1px solid blue"></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td><label for="Confirm Password:" style="color:blue;font-size:17px">Confirm Password:</label></td>
+<td><input type="password" name="change2" style="width:200px; height:15px;padding-left:5px;padding-top:3px;border:1px solid blue"></td>
+</tr>
+</table>
+<br>
+<input type="submit" value="submit" style="width:100px;height:30px;border:1px solid yellow">
+<br>
+<center><h2 style="color:red;font-size:20px">{{msg}}</h2></center>
+</div>
+</center>
+</form>
+<h3 style="color:green">{{mr}}</h3>
+</body>
+</html>
