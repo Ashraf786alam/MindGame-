@@ -3,7 +3,7 @@ Django Project
 
 i. It is a web app using sqlite3 database.
 
-ii. There is a user signup and login page. User can’t access any page without login. If anyone try to access a page without login then we redirect user to login page.
+ii. There is a user signup and login page. User can’t access any page without login. If user try to access a page without login then we redirect user to login page.
 
 iii. There are six subjects, Math, Physics, Chemistry, English, Biology, Social. User can select any subject and take the test on that particular subject.
 
